@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&family=Open+Sans:wght@300;400&display=swap');
+:root {
+    --tamnoPlava: #1d527c;  /* rgb(29, 82, 124) */
+    --svetloPlava: #459ad3; /* rgb(69, 154, 211) */
+    --orange: #fd7f45;      /* rgb(253, 127, 69) */
+    --tamnoSiva: #3c3b3c;
+    --svetloSiva: lightgray;
+    --bela: #fff;
+    --transition: .3s ease;
+    --padding: 100px 0;
+    --fontFamily: 'Open Sans', sans-serif;
+    --headings: 'Montserrat', sans-serif;
+    --fontSize: 16px;
+}
+/*********************
+ basic styles 
+ ********************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    color: var(--tamnoSiva);
+    line-height: 1.6;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--headings);
+}
+a {
+    text-decoration: none;
+    transition: var(--transition);
+}
+ul {
+    list-style: none;
+}
+button {
+    padding: 15px 40px;
+    border: 1px solid var(--bela);
+    background: transparent;
+    color: var(--bela);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+button:hover {
+    background: var(--bela);
+    color: var(--tamnoSiva);
+}
+.container {
+    width: 80%;
+    margin: auto;
+}
+.headings {
+    font-size: 3rem;
+    font-weight: 700;
+    color: var(--tamnoPlava);
+}
+.headings::after {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 100px;
+    background: var(--tamnoPlava);
+    margin: 10px 0 20px 0;
+}
+/*********************
+nav 
+*********************/
+nav {
+    background: linear-gradient(to right, var(--orange), var(--tamnoPlava));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 5px 0;
+}
+nav ul {
+    display: flex;
+}
+nav a {
+    color: var(--bela);
+    text-transform: uppercase;
+    padding: 0 30px;
+    letter-spacing: 2px;
+}
+nav a:hover {
+    color: var(--svetloSiva);
+}
+.logo {
+    font-size: 2rem;
+}
+/*********************
+header
+*********************/
+header {
+    background-image: linear-gradient(rgba(29, 82, 124,.8),rgba(253, 127, 69,.8)), url(img/baloon.jpg);
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--bela);
+    text-align: center;
+}
+header h1 {
+    font-size: 3rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+header h1 strong {
+    font-style: italic;
+}
+header p {
+    font-size: 1.2rem;
+    padding: 30px;
+}
+/*********************
+about
+*********************/
+.about {
+    padding: var(--padding);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.about img {
+    width: 100%;
+    box-shadow: 10px 10px var(--tamnoPlava);
+    transition: var(--transition);
+}
+.about img:hover {
+    box-shadow: 10px 10px var(--orange);
+}
+.about article:first-child {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 0 0 48%;
+}
+.about article:last-child {
+    flex: 0 0 48%;
+}
+/*********************
+services
+*********************/
+.services {
+    padding: var(--padding);
+    background-image: linear-gradient(rgba(29, 82, 124,.9), rgba(29, 82, 124,.9)), url(img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: var(--bela);
+}
+.services h2 {
+    color: var(--bela);
+}
+.services .headings::after {
+    background: var(--orange);
+}
+.services .container {
+    display: flex;
+    flex-wrap: wrap;
+}
+.services article {
+    flex: 1;
+}
+.services article:first-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.services article:first-child i {
+    font-size: 5rem;
+    color: var(--orange);
+    flex: 0 0 50%;
+}
+.services p {
+    padding: 30px 0;
+}
+/*********************
+blog
+*********************/
+.blog {
+    padding: var(--padding);
+    text-align: center;
+}
+.blog img {
+    width: 100%;
+}
+.blog .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.blog article {
+    flex: 0 0 30%;
+}
+.blog .headings::after {
+    background: var(--orange);
+    margin:10px auto 30px auto;
+}
+.blog button {
+    background: var(--tamnoPlava);
+}
+.blog button:hover {
+    background: var(--orange);
+}
+.blog p {
+    text-align: justify;
+    padding: 20px 0;
+}
+.blog h3 {
+    font-size: 1.7rem;
+    margin-top: 20px;
+}
+/*********************
+footer
+*********************/
+footer {
+    background-image: linear-gradient(to left, rgba(29, 82, 124,.8),rgba(253, 127, 69,.8)), url(img/baloon.jpg);
+    padding: var(--padding);
+    text-align: center;
+    color: var(--bela);
+}
+footer a {
+    color: var(--tamnoPlava);
+    font-size: 2rem;
+    margin: 10px 10px 20px 10px;
+    display: inline-block;
+}
+footer a:hover {
+    color: var(--svetloPlava);
+}
+
+/*********************
+R E S P O N S I V E
+*********************/
+@media(max-width: 767px) {
+    nav {
+        flex-direction: column;
+    }
+    nav a {
+        padding: 0 5px;
+        letter-spacing: 1px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+    }
+    .container {
+        width: 90%;
+    }
+    .about article:first-child,
+    .about article:last-child,
+    .services article,
+    .blog article {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    .services article:first-child i {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+}
